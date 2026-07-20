@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="welcomeScreen" class="welcome-overlay">
+      <div class="welcome-content">
+        <h1 id="typingText" class="fade-text">A Palace of our Memories</h1>
+        <p id="subText" class="fade-text-sub">A place to keep our stories saved in time</p>
+        <button class="btn-open" onclick="enterWebsite()">
+          Watch our story....
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-fixed"></div>
+    <div class="star-overlay"></div>
+
+    <main id="mainContent" class="hidden-content">
+      <section class="hero active">
+        <div class="hero-content">
+          <h1>Us, in Time.</h1>
+          <p class="subtitle">
+            Every passing second is a story that belongs to us
+          </p>
+
+          <div class="timer-wrapper">
+            <div class="time-segment">
+              <span id="days">00</span>
+              <span class="label">Days</span>
+            </div>
+            <div class="separator">:</div>
+            <div class="time-segment">
+              <span id="hours">00</span>
+              <span class="label">Hours</span>
+            </div>
+            <div class="separator">:</div>
+            <div class="time-segment">
+              <span id="minutes">00</span>
+              <span class="label">Minutes</span>
+            </div>
+            <div class="separator">:</div>
+            <div class="time-segment">
+              <span id="seconds">00</span>
+              <span class="label">Seconds</span>
+            </div>
+          </div>
+
+          <button
+            onclick="scrollToSection('playlist')"
+            class="scroll-indicator"
+            aria-label="Scroll Down"
+          >
+            <i class="fas fa-arrow-down"></i>
+          </button>
+        </div>
+      </section>
+
+      <section id="playlist" class="section">
+        <div class="section-header reveal">
+          <h2>Your Favorite Songs</h2>
+          <p>A melody that always reminds me of you</p>
+        </div>
+
+        <div class="track-list reveal">
+          <div
+            id="track-perfect"
+            class="track-item"
+            onclick="playSong('perfect')"
+          >
+            <div class="track-icon"><i class="fas fa-play"></i></div>
+            <div class="track-info">
+              <h3>By My Side (XO, Kitty)</h3>
+              <p>Saint Rene</p>
+            </div>
+            <div class="track-duration">2:36</div>
+          </div>
+
+          <div
+            id="track-thousand"
+            class="track-item"
+            onclick="playSong('thousand')"
+          >
+            <div class="track-icon"><i class="fas fa-play"></i></div>
+            <div class="track-info">
+              <h3>A Different Way</h3>
+              <p>DJ Snake</p>
+            </div>
+            <div class="track-duration">3:17</div>
+          </div>
+
+          <div
+            id="track-allofme"
+            class="track-item"
+            onclick="playSong('allofme')"
+          >
+            <div class="track-icon"><i class="fas fa-play"></i></div>
+            <div class="track-info">
+              <h3>Cruel Summer</h3>
+              <p>Taylor Swift</p>
+            </div>
+            <div class="track-duration">2:59</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="stories" class="section">
+        <div class="section-header reveal">
+          <h2>Tracing Our Story</h2>
+          <p>
+            From a simple "hi" to a meaningful "don't go."
+            This is my favorite timeline.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-box left reveal">
+            <div class="date-badge">09 Nov 2025</div>
+            <div class="box-content">
+              <h3><i class="fas fa-meteor"></i> Where it all starts</h3>
+              <p>
+                It all started with the shared passion of a sport..... Badminton 
+                Who would have thought that this passion will embark the most beautiful journey of our lives.
+                Who would have know what the universe had in the store for me?
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-box right reveal">
+            <div class="date-badge">25 Nov 2025</div>
+            <div class="box-content">
+              <h3><i class="fas fa-coffee"></i> Our First Time Together</h3>
+              <p>
+                I still remember the day, your birthday! When we first went to a place which you and I,
+                we both like...... Imagicaa. I am very happy that I was able to give you
+                the experince of thrill on your birthday.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-box left reveal">
+            <div class="date-badge">01 Jan 2026</div>
+            <div class="box-content">
+              <h3><i class="fas fa-heart"></i> When it starts</h3>
+              <p>
+                I know for you this date might be a bit too early at that time but an important 
+                date anyways for us. A place in time which gave us a type of connection
+                which is very special and unique to us.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-box right reveal">
+            <div class="date-badge">04 Apr 2026</div>
+            <div class="box-content">
+              <h3><i class="fas fa-moon"></i> Our trip to Bangalore</h3>
+              <p>
+                Our trip to Bangalore was not very exciting but a much needed one.
+                The ending of this trip was not very pleasant but it gave us a 
+                chance to realise what is the importance of being together.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-box left reveal">
+            <div class="date-badge">28 May 2026</div>
+            <div class="box-content">
+              <h3>
+                <i class="fas fa-plane-departure"></i> Delhi Trip
+              </h3>
+              <p>
+                Our trip to Delhi made us realise how important are we to each other.
+                We realised how much we really need each other. How we bring out the 
+                best in us when we are together.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-box right reveal">
+            <div class="date-badge">03 Jun 2026</div>
+            <div class="box-content">
+              <h3><i class="fas fa-gift"></i> Your promise which you kept</h3>
+              <p>
+                I remember the promise you made which you made in Delhi.
+                From 3rd of June, 2026, your time only for me. Which you have kept
+                (till now....). Thanks for being there babe.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-box left reveal">
+            <div class="date-badge">21 Jun 2026</div>
+            <div class="box-content">
+              <h3>
+                <i class="fas fa-plane-departure"></i> Jodhpur.. Here we come
+              </h3>
+              <p>
+                Our trip to Jodhpur started on 20th June, 2026. But the story started
+                on 21 June, 2026. The moment we realise that we need each other to
+                move ahead in life. I am really thankful to god for this day that it
+                happened in our lives. And I still can't get over the fact that we went
+                all the way from Jodhpur to Jaisalmer just to have "laal maas" in 1156AD.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-box left reveal">
+            <div class="date-badge">06 Jul 2026</div>
+            <div class="box-content">
+              <h3>
+                <i class="fas fa-plane-departure"></i> Our Hyderabad Masquerade
+              </h3>
+              <p>
+                This day marks as our trip to Hyderabad. I really hope you enjoyed
+                the trip to claw culture. I know we did not win much that day
+                but the time spent with you was just so memorable that it is
+                one of the most valuable days of my life.....
+              </p>
+            </div>
+          </div>
+
+          
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header reveal">
+          <h2>The Beautiful Moments</h2>
+        </div>
+        <div class="gallery-container reveal">
+          <div class="polaroid rotate-left">
+            <img
+              src="images/PDImagicaa.JPG"
+              alt="Foto 1"
+            />
+            <div class="caption">Happy Birthday Baby! 🐬</div>
+          </div>
+          <div class="polaroid rotate-right">
+            <img
+              src="images/choco_confused.JPG"
+              alt="Foto 2"
+            />
+            <div class="caption">Psyduck energy? 😵‍💫</div>
+          </div>
+          <div class="polaroid rotate-right">
+            <img
+              src="images/PDFun1.JPG"
+              alt="Foto 3"
+            />
+            <div class="caption">Snacking time!! 😋</div>
+          </div>
+          <div class="polaroid rotate-right">
+            <img
+              src="images/PDDelhi.JPG"
+              alt="Foto 4"
+            />
+            <div class="caption">Delhi changed us... 💑</div>
+          </div>
+          <div class="polaroid rotate-left">
+            <img
+              src="images/PDJodhpur.JPG"
+              alt="Foto 5"
+            />
+            <div class="caption">Never leaving my mind! 🥰</div>
+          </div>
+          <div class="polaroid rotate-right">
+            <img
+              src="images/PandaHyd.JPG"
+              alt="Foto 6"
+            />
+            <div class="caption">Claw Culture Baby 🐼</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section closing-section reveal">
+        <div class="closing-content">
+          <h2 class="gradient-text-big">
+            Each memory of ours<br />is kept here,<br /><span
+              class="highlight-pink"
+              >forever</span
+            >
+          </h2>
+
+          <div class="glow-box">
+            <i
+              class="fas fa-heart heart-beat"
+              id="loveIcon"
+              onclick="createHeartShower()"
+            ></i>
+            <p>
+              Thank you for being a part of my life. Every sencond
+              spent with you is a priceless gift.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>Made with all my heart..... <br /> Only for you my love <br /> ❤️ </p>
+      </footer>
+    </main>
+
+    <div class="music-floater" id="playerBar">
+      <div class="floater-info">
+        <div class="equalizer"><span></span><span></span><span></span></div>
+        <span id="currentSongTitle" class="song-title">Pilih lagu...</span>
+      </div>
+      <button
+        onclick="toggleMusic()"
+        class="btn-control"
+        aria-label="Play Music"
+      >
+        <i class="fas fa-play" id="mainPlayIcon"></i>
+      </button>
+    </div>
+
+    <audio id="myAudio" loop>
+      <source src="myAudio/until_i_found_u.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="playlistAudio"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
